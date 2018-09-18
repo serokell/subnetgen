@@ -10,7 +10,7 @@ IPv6 subnetworks are [RFC 4193][] (ULA) conformant.
 
 [RFC 4193]: https://tools.ietf.org/html/rfc4193
 
-Bytes are securely generated via `getrandom(3)`. This program will only work on
+Bytes are securely generated via `getentropy(3)`. This program will only work on
 Linux and OpenBSD.
 
 | Network | Flag | N, 50% collision chance |     Network capacity |
