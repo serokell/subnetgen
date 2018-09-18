@@ -3,8 +3,8 @@
 Generate IPv4 and IPv6 subnetworks.
 
 The underlying idea behind this program is to make sure networks are
-composable: say, that someone can daisy-chain VPNs, local networks, and it will
-all still work without shadowing and all peers will be adressable.
+composable: say, so that someone can daisy-chain VPNs, local networks, and it
+will all still work without shadowing and all peers will be adressable.
 
 IPv6 subnetworks are [RFC 4193][] (ULA) conformant.
 
