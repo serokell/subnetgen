@@ -10,14 +10,16 @@ uint8_t subnetgen_random_uint8() {
   return n;
 }
 
-#define SUBNETGEN_IPV4_MASK "10.%u.0.0/16"
+#define SUBNETGEN_IPV4_MASK "10.%u.%u.0/16"
 #define SUBNETGEN_IPV6_MASK "fd%x:%x%x:%x%x::/48"
 
 int main(int argc, char *argv[]) {
   for (;;)
     switch (getopt(argc, argv, "46")) {
     case '4':
-      printf(SUBNETGEN_IPV4_MASK "\n", subnetgen_random_uint8());
+      printf(SUBNETGEN_IPV4_MASK "\n",
+             subnetgen_random_uint8(),
+             subnetgen_random_uint8());
       break;
     case '6':
       printf(SUBNETGEN_IPV6_MASK "\n",
